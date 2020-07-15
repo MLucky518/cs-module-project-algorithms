@@ -3,9 +3,14 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
+    # For every array element in the length of given array iterate and check if value is equal to 0
+    # If equal, we remove the element and append a 0 to the end of our array essentially moving non zero ints left
 
-    pass
+    for i in range(0,len(arr)):
+        if arr[i] == 0:
+            arr.remove(arr[i])
+            arr.append(0)
+    return arr
 
 
 if __name__ == '__main__':
